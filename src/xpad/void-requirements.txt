@@ -6,3 +6,4 @@ intltool
 libSM-devel
 libX11-devel
 libXtst-devel
+gettext-tiny
