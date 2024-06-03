@@ -39,7 +39,7 @@ tar -C $build_dir -jxf src/$pkgname/$pkgname-$pkgver.tar.bz2
   ( tee $root_dir$local_dir/bin/xpad | md5sum ) <<-_EOF_
 	#!/bin/sh
 	export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:$local_dir/libexec
-	exec $local_dir/libexec/xpad "$@"
+	exec $local_dir/libexec/xpad "\$@"
 	_EOF_
   chmod 755 $root_dir$local_dir/bin/xpad
 )
