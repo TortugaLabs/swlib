@@ -19,10 +19,11 @@ local_dir=/usr/local/pkgs/$pkgname-$pkgver
 root_dir=$build_dir/$pkgname-root
 
 tar -C $build_dir -jxf src/$pkgname/$pkgname-$pkgver.tar.bz2
-
+src=$(pwd)/src/$pkgname
 (
   cd $build_dir/$pkgname-$pkgver
   mkdir -p $root_dir$local_dir
+  ( cd data ; patch < $src/xpad.desktop.dif )
   ./autogen.sh
   ./configure --prefix=$local_dir --bindir=$local_dir/libexec
   make
