@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Build flpsed
+# Build custom geany plugins
 #
 set -euf
 pkgname=my-geany-plugins
