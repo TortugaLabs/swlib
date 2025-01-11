@@ -1,1 +1,1 @@
-geany-devel
+geany-devel git
