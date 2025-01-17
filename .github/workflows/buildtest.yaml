@@ -59,6 +59,7 @@ jobs:
                 do
                   echo "$i: $line"
                 done
+                echo ''
               done
             ) > contents.txt
             cat contents.txt

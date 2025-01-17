@@ -61,6 +61,7 @@ jobs:
                 do
                   echo "$i: $line"
                 done
+                echo ''
               done
             ) > manifest.txt
             gh release upload --clobber $GITHUB_REF_NAME $artifacts manifest.txt
