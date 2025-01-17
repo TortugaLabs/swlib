@@ -56,6 +56,7 @@ jobs:
             (
               for i in $artifacts
               do
+                ls -1sh "$i"
                 tar -ztvf "$i" | while read -r line
                 do
                   echo "$i: $line"
